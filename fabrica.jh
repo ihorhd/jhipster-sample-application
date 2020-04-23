@@ -1,0 +1,18 @@
+entity Component {
+	componentName String,
+ 	costUSD Long,
+    costARS Long,
+    costDate Instant
+}
+
+entity Product {
+	productName String,
+}
+
+relationship OneToMany {
+
+	Component to Product{component}
+}
+paginate Component, Product with infinite-scroll
+
+service all with serviceImpl
