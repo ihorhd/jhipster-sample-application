@@ -1,0 +1,40 @@
+{
+    "name": "Source",
+    "fields": [
+        {
+            "fieldName": "sourceName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "costUSD",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "costARS",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "costDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "source",
+            "relationshipName": "product"
+        }
+    ],
+    "changelogDate": "20200423143900",
+    "entityTableName": "source",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

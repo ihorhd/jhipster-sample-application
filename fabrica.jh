@@ -1,0 +1,18 @@
+entity Source {
+	sourceName String,
+ 	costUSD Long,
+    costARS Long,
+    costDate Instant
+}
+
+entity Product {
+	productName String,
+}
+
+relationship OneToMany {
+
+	Source to Product{source}
+}
+paginate Source, Product with infinite-scroll
+
+service all with serviceImpl
